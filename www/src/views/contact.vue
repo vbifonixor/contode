@@ -38,17 +38,13 @@ export default {
       newContact.phoneNumbers = [new ContactField('mobile', this.contact.phone, true)];
       newContact.emails = [new ContactField('work', this.contact.email, true)];
 
-      console.log(this.contact.face);
-
       newContact.photos = [new ContactField('url', this.contact.face)];
 
-      console.log(newContact);
-
-      vm = this;
+      let vm = this;
 
       newContact.save(function() {
         alert('Контакт сохранён успешно!');
-        vm.$router.push('main');
+        vm.$router.push('/');
       });
     }
   }
