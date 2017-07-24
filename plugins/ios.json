@@ -1,0 +1,31 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "CAMERA_USAGE_DESCRIPTION": "To scan barcodes",
+            "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+        },
+        "cordova-plugin-contacts": {
+            "CONTACTS_USAGE_DESCRIPTION": "To add contacts",
+            "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+        },
+        "cordova-plugin-camera": {
+            "CAMERA_USAGE_DESCRIPTION": " ",
+            "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.laesporadelhongo.cordovue"
+        }
+    },
+    "dependent_plugins": {}
+}

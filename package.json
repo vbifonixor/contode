@@ -1,0 +1,78 @@
+{
+    "name": "contode",
+    "description": "QR-Code vCards exchange app",
+    "version": "1.0.0",
+    "author": {
+        "name": "Mikhail Kononenko <i@vbifonix.ru>",
+        "email": "i@vbifonix.ru",
+        "url": "https://github.com/vbifonixor"
+    },
+    "homepage": "",
+    "license": "MIT",
+    "cordova": {
+        "id": "contode",
+        "platforms": [
+            "android",
+            "browser",
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "phonegap-plugin-barcodescanner": {
+                "CAMERA_USAGE_DESCRIPTION": "To scan barcodes"
+            },
+            "cordova-plugin-contacts": {
+                "CONTACTS_USAGE_DESCRIPTION": "To add contacts"
+            },
+            "cordova-plugin-compat": {},
+            "cordova-plugin-camera": {
+                "CAMERA_USAGE_DESCRIPTION": "To take a photo of you!",
+                "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
+            }
+        }
+    },
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot --content-base www",
+        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+        "android": "yarn run build && cordova run android",
+        "ios": "cordova run ios",
+        "prepare": "cordova platform add",
+        "serve": "cordova serve --port 8080"
+    },
+    "engine": "node >= 6.0.0",
+    "dependencies": {
+        "autoprefixer": "^7.1.1",
+        "cordova": "^7.0.1",
+        "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-camera": "^2.4.1",
+        "cordova-plugin-compat": "^1.1.0",
+        "cordova-plugin-contacts": "^2.3.1",
+        "cordova-plugin-whitelist": "1",
+        "extract-text-webpack-plugin": "^2.1.0",
+        "friendly-errors-webpack-plugin": "^1.6.1",
+        "loglevel": "^1.4.1",
+        "phonegap-plugin-barcodescanner": "^6.0.8",
+        "qrcodejs": "https://github.com/vbifonixor/qrcodejs",
+        "store": "^2.0.12",
+        "vue": "^2.3.3",
+        "vue-router": "^2.5.3",
+        "vuex": "^2.3.1",
+        "vuex-router-sync": "^4.1.2"
+    },
+    "devDependencies": {
+        "babel-core": "^6.24.1",
+        "babel-loader": "^7.0.0",
+        "babel-plugin-syntax-dynamic-import": "^6.18.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "cross-env": "^5.0.0",
+        "css-loader": "^0.28.1",
+        "file-loader": "^0.11.1",
+        "vue-loader": "^12.1.0",
+        "vue-template-compiler": "^2.3.3",
+        "webpack": "^2.5.1",
+        "webpack-dev-server": "^2.4.5"
+    }
+}
