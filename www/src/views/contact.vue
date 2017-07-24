@@ -40,6 +40,16 @@ export default {
 
       newContact.photos = [new ContactField('url', this.contact.face)];
 
+      let organization = new ContactOrganization();
+
+      organization.name = this.contact.company;
+      organization.title = this.contact.title;
+
+      newContact.organizations = [organization];
+
+
+      console.log(newContact);
+
       let vm = this;
 
       newContact.save(function() {
